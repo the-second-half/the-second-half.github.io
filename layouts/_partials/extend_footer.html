@@ -1,0 +1,8 @@
+{{- /* 页脚品牌行：让每一页都能把读者引到公众号。公众号名在 hugo.toml 的 params.wechatName 里改 */ -}}
+{{- with .Site.Params.wechatName }}
+<div style="text-align:center;font-size:.82rem;opacity:.65;margin:2rem 0 .6rem;line-height:1.9;">
+  <span>公众号：{{ . }}</span>
+  <span style="opacity:.45;">·</span>
+  <span>每日记录，身体、心态、现金</span>
+</div>
+{{- end }}

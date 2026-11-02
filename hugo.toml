@@ -37,6 +37,8 @@ hasCJKLanguage = true
   hideFooter = false
   ShowShareButtons = false
   dateFormat = '2006-01-02'
+  # 公众号全名 = 全渠道统一检索词（页脚会显示）。改名只改这一行
+  wechatName = '过好一生下半场'
   # 发布前保持 true：搜索引擎不收录。正式对外那天改成 false
   noindex = true
 
