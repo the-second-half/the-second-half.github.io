@@ -1,14 +1,13 @@
-{{- /* 发布前屏蔽收录；正式上线时把 hugo.toml 里 params.noindex 改成 false 即可 */ -}}
+{{- /* 发布前屏蔽收录。
+     hugo.toml 里 params.noindex 保持 true = 不收录；正式对外改成 false。
+     注意：PaperMod 自己会输出 <meta name="robots" content="index, follow">，
+     出现两个 robots 标签时搜索引擎取最严格的那个，所以预览期仍然是 noindex。 */ -}}
 {{- if .Site.Params.noindex }}
 <meta name="robots" content="noindex, nofollow">
 {{- end }}
 
-{{- /* 中英双语互认：告诉搜索引擎这是同一篇内容的两个语言版本 */ -}}
+{{- /* hreflang 主题已自带（zh / en），这里只补它没有的 x-default 兜底 */ -}}
 {{- if .IsTranslated }}
-{{- range .AllTranslations }}
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
-{{- end }}
-{{- /* x-default 指向默认语言（中文）版本，机型/语言不匹配时兜底 */ -}}
 {{- range .AllTranslations }}
 {{- if eq .Language.Lang "zh" }}
 <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
