@@ -1,8 +1,14 @@
-{{- /* 页脚品牌行：让每一页都能把读者引到公众号。公众号名在 hugo.toml 的 params.wechatName 里改 */ -}}
-{{- with .Site.Params.wechatName }}
+{{- /* 页脚品牌行：公众号名 + 品牌句。
+     公众号名在 hugo.toml 的 params.wechatName 改；品牌句按语言分开写。 */ -}}
+{{- $wx := .Site.Params.wechatName }}
+{{- if eq .Site.Language.Lang "en" }}
 <div style="text-align:center;font-size:.82rem;opacity:.65;margin:2rem 0 .6rem;line-height:1.9;">
-  <span>公众号：{{ . }}</span>
-  <span style="opacity:.45;">·</span>
-  <span>每日记录，身体、心态、现金</span>
+  <span style="font-style:italic;">No shore ahead — I row.</span>
+</div>
+{{- else }}
+<div style="text-align:center;font-size:.82rem;opacity:.65;margin:2rem 0 .6rem;line-height:1.9;">
+  {{- with $wx }}<span>公众号：{{ . }}</span>
+  <span style="opacity:.45;">·</span>{{ end }}
+  <span>浮生无岸，我自为舟</span>
 </div>
 {{- end }}
