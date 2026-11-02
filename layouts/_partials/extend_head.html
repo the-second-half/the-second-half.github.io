@@ -24,6 +24,33 @@
 <meta property="og:image:alt" content="{{ .Site.Title }}">
 {{- end }}
 
+{{- /* 长表格：附表有 10 列，手机屏上直接挤成一团。
+       窄屏改为横向滚动，第一列（指标名）允许换行，数字列不换行。 */ -}}
+<style>
+  @media (max-width: 860px) {
+    .post-content table,
+    .md-content table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .post-content table th,
+    .post-content table td,
+    .md-content table th,
+    .md-content table td {
+      white-space: nowrap;
+    }
+    .post-content table th:first-child,
+    .post-content table td:first-child,
+    .md-content table th:first-child,
+    .md-content table td:first-child {
+      white-space: normal;
+      min-width: 7.5em;
+    }
+  }
+</style>
+
 {{- /* 首页头像样式：头像由 homeInfoParams.Content 内的 img.site-avatar 提供 */ -}}
 {{- if .IsHome }}
 <style>
