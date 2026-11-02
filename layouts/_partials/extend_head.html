@@ -14,3 +14,28 @@
 {{- end }}
 {{- end }}
 {{- end }}
+
+{{- /* 分享图兜底：主题只在页面有 cover.image 时才输出 og:image，
+       这里给没有封面的页面补一张统一的品牌图，避免分享出去是空白卡片。 */ -}}
+{{- if not .Params.cover.image }}
+<meta property="og:image" content="{{ "images/og-default.png" | absURL }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ .Site.Title }}">
+{{- end }}
+
+{{- /* 首页头像样式：头像由 homeInfoParams.Content 内的 img.site-avatar 提供 */ -}}
+{{- if .IsHome }}
+<style>
+  .home-info .entry-content img.site-avatar {
+    display: block;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .14);
+    border: 2px solid rgba(13, 92, 46, .12);
+  }
+  .home-info .entry-content p:first-of-type { margin-top: 0; }
+</style>
+{{- end }}

@@ -58,7 +58,7 @@ hasCJKLanguage = true
 
     [languages.zh.params.homeInfoParams]
       Title = '下半场：身体、心态、现金'
-      Content = '50 岁那年，行业下行，公司出事，体检单上一串箭头。两年时间，我把三件事重新做了一遍：体重从 95kg 到 75kg，睡眠回来了，收支理顺了。这里每天记一笔，不鸡血，不完美，只是如实。'
+      Content = "<img class=\"site-avatar\" src=\"/images/avatar.png\" alt=\"下半场\">\n\n50 岁那年，行业下行，公司出事，体检单上一串箭头。两年时间，我把三件事重新做了一遍：体重从 95kg 到 75kg，睡眠回来了，收支理顺了。这里每天记一笔，不鸡血，不完美，只是如实。"
 
   [[languages.zh.menu.main]]
     identifier = 'posts'
@@ -108,7 +108,7 @@ hasCJKLanguage = true
 
     [languages.en.params.homeInfoParams]
       Title = 'The Second Half'
-      Content = 'At fifty my industry went down, the company I worked for collapsed, and my blood test came back full of arrows. Two years later I am 20 kg lighter, sleeping again, and spending on purpose. One entry a day. No hype, no before-and-after miracles. Just what actually happened.'
+      Content = "<img class=\"site-avatar\" src=\"/images/avatar.png\" alt=\"Second Half\">\n\nAt fifty my industry went down, the company I worked for collapsed, and my blood test came back full of arrows. Two years later I am 20 kg lighter, sleeping again, and spending on purpose. One entry a day. No hype, no before-and-after miracles. Just what actually happened."
 
   [[languages.en.menu.main]]
     identifier = 'posts'
