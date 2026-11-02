@@ -1,0 +1,24 @@
+# ===== 安全红线：以下内容永不进公开仓库 =====
+# 原始截图、体检报告原件、身份可识别素材
+raw/
+inbox/
+*.xlsx
+*.xls
+*.numbers
+
+# 密钥与本地配置
+.env
+*.key
+config.local.*
+secrets.*
+
+# ===== Hugo 构建产物 =====
+public/
+resources/
+.hugo_build.lock
+
+# ===== Python =====
+__pycache__/
+*.pyc
+.venv/
+venv/

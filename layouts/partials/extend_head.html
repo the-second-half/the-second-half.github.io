@@ -1,0 +1,17 @@
+{{- /* 发布前屏蔽收录；正式上线时把 hugo.toml 里 params.noindex 改成 false 即可 */ -}}
+{{- if .Site.Params.noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+{{- /* 中英双语互认：告诉搜索引擎这是同一篇内容的两个语言版本 */ -}}
+{{- if .IsTranslated }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- /* x-default 指向默认语言（中文）版本，机型/语言不匹配时兜底 */ -}}
+{{- range .AllTranslations }}
+{{- if eq .Language.Lang "zh" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+{{- end }}
+{{- end }}
