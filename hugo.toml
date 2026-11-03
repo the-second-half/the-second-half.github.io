@@ -54,12 +54,12 @@ hasCJKLanguage = true
   contentDir = 'content/zh'   # 中英各用独立目录，互不串台
 
   [languages.zh.params]
-    author = '老陈'
+    author = '老夏'
     description = '一位五十岁管理者的身体、心态与现金流重建记录：95kg 到 75kg，两年，三件事。'
 
     [languages.zh.params.homeInfoParams]
       Title = '下半场：身体、心态、现金'
-      Content = "<img class=\"site-avatar\" src=\"/images/avatar.png\" alt=\"下半场\">\n\n50 岁那年，行业下行，公司出事，体检单上一串箭头。两年时间，我把三件事重新做了一遍：体重从 95kg 到 75kg，睡眠回来了，收支理顺了。这里每天记一笔，不鸡血，不完美，只是如实。"
+      Content = "<img class=\"site-avatar\" src=\"/images/avatar.png\" alt=\"下半场\">\n\n50 岁那年，行业下行，公司出事，体检单上一串箭头。两年时间，我把三件事重新做了一遍：体重从 95kg 到 75kg，睡眠回来了，收支理顺了。这里一篇一篇地记，不鸡血，不完美，只是如实。"
 
   [[languages.zh.menu.main]]
     identifier = 'posts'
@@ -104,12 +104,12 @@ hasCJKLanguage = true
   contentDir = 'content/en'
 
   [languages.en.params]
-    author = 'Lao Chen'
-    description = 'A manager in his fifties rebuilding body, mind and money. 95 kg to 75 kg in two years. One honest entry a day.'
+    author = 'Lao Xia'
+    description = 'A manager in his fifties rebuilding body, mind and money. 95 kg to 75 kg in two years. Honest notes, written as they happen.'
 
     [languages.en.params.homeInfoParams]
       Title = 'The Second Half'
-      Content = "<img class=\"site-avatar\" src=\"/images/avatar.png\" alt=\"Second Half\">\n\nAt fifty my industry went down, the company I worked for collapsed, and my blood test came back full of arrows. Two years later I am 20 kg lighter, sleeping again, and spending on purpose. One entry a day. No hype, no before-and-after miracles. Just what actually happened."
+      Content = "<img class=\"site-avatar\" src=\"/images/avatar.png\" alt=\"Second Half\">\n\nAt fifty my industry went down, the company I worked for collapsed, and my blood test came back full of arrows. Two years later I am 20 kg lighter, sleeping again, and spending on purpose. I write when there is something worth saying. No hype, no before-and-after miracles. Just what actually happened."
 
   [[languages.en.menu.main]]
     identifier = 'posts'

@@ -8,7 +8,7 @@ I am in my early fifties, and I spent most of my career managing other people's 
 
 In two years I rebuilt three things at once: my body (95 kg to 75 kg), my mental state, and my finances. Not perfectly, and not in a straight line.
 
-This site is the record. One entry a day, written the day it happened.
+This site is the record. I write when there is something worth writing down — not on a schedule.
 
 ## Why make it public
 
