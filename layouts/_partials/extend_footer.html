@@ -12,3 +12,26 @@
   <span>浮生无岸，我自为舟</span>
 </div>
 {{- end }}
+
+{{- /* 访问量统计：不蒜子（busuanzi），免费、无需注册、无需备案。
+     - 容器默认 display:none，脚本取到数字后才显示，避免脚本挂了露出「-」或 0
+     - site_pv＝全站浏览人次，site_uv＝全站访客数，page_pv＝本文阅读次数
+     - 页面归属靠浏览器 Referer 识别，所以统计脚本必须同源页面加载（本文件即页脚，满足）
+     - 若长期不用，删掉本段即可，无其他依赖 */ -}}
+<div class="bsz-stats" style="text-align:center;font-size:.78rem;opacity:.5;line-height:1.9;margin:0 0 1.4rem;">
+  {{- if eq .Site.Language.Lang "en" }}
+  <span id="busuanzi_container_site_uv" style="display:none;">Visitors <span id="busuanzi_value_site_uv">-</span></span>
+  <span id="busuanzi_container_site_pv" style="display:none;">&nbsp;·&nbsp;Views <span id="busuanzi_value_site_pv">-</span></span>
+  {{- if .IsPage }}
+  <span id="busuanzi_container_page_pv" style="display:none;">&nbsp;·&nbsp;This post <span id="busuanzi_value_page_pv">-</span></span>
+  {{- end }}
+  {{- else }}
+  <span id="busuanzi_container_site_uv" style="display:none;">访客 <span id="busuanzi_value_site_uv">-</span> 人</span>
+  <span id="busuanzi_container_site_pv" style="display:none;">&nbsp;·&nbsp;总浏览 <span id="busuanzi_value_site_pv">-</span> 次</span>
+  {{- if .IsPage }}
+  <span id="busuanzi_container_page_pv" style="display:none;">&nbsp;·&nbsp;本文阅读 <span id="busuanzi_value_page_pv">-</span> 次</span>
+  {{- end }}
+  {{- end }}
+</div>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
